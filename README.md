@@ -7,40 +7,61 @@
 ## Installation
 
 
-1.  **Initialize git (Windows):**
-    Run the `000_init.bat` file.
+1. **Initialize git:**
+    - Windows: Run `scripts/000_init.bat`
+    - Linux/macOS: Run `bash scripts/000_init.sh`
 
-2.  **Create a virtual environment (Windows):**
-    Run the `001_env.bat` file.
+2. **Create a virtual environment:**
+    - Windows: Run `scripts/001_env.bat`
+    - Linux/macOS: Run `bash scripts/001_env.sh`
 
-3.  **Activate the virtual environment (Windows):**
-    Run the `002_activate.bat` file.
+3. **Activate the virtual environment:**
+    - Windows (cmd): Run `scripts/002_activate.bat`
+    - PowerShell: `& .\.venv\Scripts\Activate.ps1`
+    - Linux/macOS: `source scripts/002_activate.sh`
 
-4.  **Install dependencies:**
-    Run the `003_setup.bat` file. This will install all the packages listed in `requirements.txt`.
+4. **Install dependencies:**
+    - Windows: `scripts/003_setup.bat`
+    - Linux/macOS: `bash scripts/003_setup.sh` (installs from `requirements.txt`).
 
-5.  **Deactivate the virtual environment (Windows):**
-    Run the `008_deactivate.bat` file.
+5. **Deactivate the virtual environment:**
+    - Windows: `scripts/008_deactivate.bat`
+    - Linux/macOS: `bash scripts/008_deactivate.sh`
 
 ## Usage
 
-1.  **Run the main application (Windows):**
-    Run the `004_run.bat` file.
+1. **Run the main application:**
+    - Windows: Run `scripts/004_run.bat`
+    - Linux/macOS: Run `bash scripts/004_run.sh`
 
     [Provide instructions on how to use your application.]
 
-## Batch Files (Windows)
+## Scripts
 
-This project includes the following batch files to help with common development tasks on Windows:
+Cross-platform helpers live under `scripts/`.
 
-* `000_init.bat`: Initialized git and also usn and pwd config setup also done.
-* `001_env.bat`: Creates a virtual environment named `venv`.
-* `002_activate.bat`: Activates the `venv` virtual environment.
-* `003_setup.bat`: Installs the Python packages listed in `requirements.txt` using `pip`.
-* `004_run.bat`: Executes the main Python script (`main.py`).
-* `005_run_test.bat`: Executes the pytest  scripts (`test_main.py`).
-* `005_run_code_cov.bat`: Executes the code coverage pytest  scripts (`test_main.py`).
-* `008_deactivate.bat`: Deactivates the currently active virtual environment.
+- Windows (.bat):
+    - `000_init.bat`: Initialize git and set global name/email.
+    - `001_env.bat`: Create a virtual environment `.venv`.
+    - `002_activate.bat`: Activate the `.venv` environment (cmd).
+    - `003_setup.bat`: Install Python packages from `requirements.txt`.
+    - `004_run.bat`: Run `main.py`.
+    - `005_run_test.bat`: Run pytest and generate HTML report.
+    - `005_run_code_cov.bat`: Run pytest with coverage and HTML report.
+    - `008_deactivate.bat`: Deactivate the current virtual environment.
+
+- Linux/macOS (.sh):
+    - `000_init.sh`: Initialize git and set global name/email.
+    - `001_env.sh`: Create a virtual environment `.venv`.
+    - `002_activate.sh`: Source the `.venv` activation script.
+    - `003_setup.sh`: Install Python packages from `requirements.txt`.
+    - `004_run.sh`: Run `main.py`.
+    - `005_run_test.sh`: Run pytest and generate HTML report.
+    - `005_run_code_cov.sh`: Run pytest with coverage and HTML report.
+    - `008_deactivate.sh`: Deactivate the current virtual environment.
+
+Tip: On Unix-like systems, you might need to make scripts executable once:
+`chmod +x scripts/*.sh`
 
 ## Contributing
 
