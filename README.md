@@ -30,9 +30,13 @@
 
 ## Usage
 
-1. **Run the main application:**
+1. **Run the main CLI app:**
     - Windows: Run `scripts/004_run.bat`
     - Linux/macOS: Run `bash scripts/004_run.sh`
+
+2. **Run the Streamlit UI:**
+    - Windows: Run `scripts/006_run_app.bat`
+    - Linux/macOS: Run `bash scripts/006_run_app.sh`
 
     [Provide instructions on how to use your application.]
 

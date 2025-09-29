@@ -3,3 +3,7 @@ dotenv
 pytest
 pytest-html
 pytest-cov
+streamlit
+pandas
+requests
+json5
